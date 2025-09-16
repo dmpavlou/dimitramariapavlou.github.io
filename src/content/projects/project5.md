@@ -1,0 +1,6 @@
+---
+title: "τίποτα μόνο λίγο χώμα από χθες / yesterday's soil short film track" 
+published: '13-03-2022'
+tech: ["short film track", "voice", "live coding"]
+url: "https://www.youtube.com/watch?v=mEMv5-3PQ9s"
+---
