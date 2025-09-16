@@ -1,0 +1,23 @@
+---
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/starwind/card";
+import { Button } from "@/components/starwind/button";
+
+const {title, desc} = Astro.props;
+---
+
+<Card class="w-[400px]" slot="preview">
+	<CardHeader>
+		<CardTitle>{title}</CardTitle>
+		<CardDescription>{desc}</CardDescription>
+	</CardHeader>
+	<CardContent class="flex flex-col gap-4">
+		<div class="flex w-full flex-col gap-2">
+			<slot/>
+		</div>
+		<img src="https://images.unsplash.com/photo-1585854467604-cf2080ccef31?q=80&w=2346&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			alt=""></div>
+	</CardContent>
+	<CardFooter class="flex justify-between">
+		<Button variant="outline">View</Button>
+	</CardFooter>
+</Card>
