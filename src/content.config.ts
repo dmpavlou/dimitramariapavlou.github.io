@@ -13,6 +13,7 @@ const projects = defineCollection({
         published: z.string(),
         description: z.string(),
         tech: z.array(z.string()),
+        image: z.string(),
         url: z.string()
     })
 });

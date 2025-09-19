@@ -1,20 +1,27 @@
 ---
 import { getCollection } from "astro:content";
 const allProjects = await getCollection("projects");
+import { Badge } from "@/components/starwind/badge";
+import ProjectCard from "@/components/ProjectCard.astro";
 ---
 
-<h1>Projects</h1>
+<h1 class="p-6" style="font-size:2em;">Projects</h1>
+
 <u1>
 
+<div class="grid grid-cols-1 gap-20 md:grid-cols-4 p-5">
     {
     allProjects.map((article: any) => (
-    <div>
-        <h2>{article.data.title}</h2>
-        <p>{article.data.description}</p>
-        <a href={article.data.url} target="_blank">
-            View Article
-        </a>
-    </div>
+    <ProjectCard project={article} buttonText="View">
+        <div class="flex">
+        {
+        article.data.tech.map((item: any)=>(
+        <Badge size="sm" variant="ghost">{item}</Badge>
+        ))
+        }
+        </div>
+    </ProjectCard>
     ))
     }
+    </div>
 </u1>

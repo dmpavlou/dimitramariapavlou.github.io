@@ -3,6 +3,7 @@ import "../styles/starwind.css"
 import Layout from "@/layouts/Layout.astro";
 import { Button } from "@/components/starwind/button";
 import ProjectCard from "@/components/ProjectCard.astro";
+import Project from "@/components/Project.astro";
 ---
 
 <html lang="en">
@@ -17,14 +18,12 @@ import ProjectCard from "@/components/ProjectCard.astro";
 
 <body>
 	<Layout>
-		<h1 class="font-extrabold text-5xl">Dimitra Maria Pavlou</h1>
-		<div class="grid grid-cols-1 md:grid-cols-3">
-			<ProjectCard title="Once upon a year" desc="This is a hypothetic project description." />
+		<br>
+		<h1 class="font-extrabold text-5xl p-6">Dimitra Maria Pavlou</h1>
+		<br>
+		<br>
+			<Project />
 
-			<ProjectCard title="Tarara rara ram" desc="Yet another one. Look!" />
-
-			<ProjectCard title="Something" desc="blah blah you ge it" />
-		</div>
 	</Layout>
 </body>
 
