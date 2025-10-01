@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from "@/layouts/Layout.astro";
+import { Button } from "@/components/starwind/button";
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+const projects = await getCollection('projects');
+return projects.map(project => ({
+params: { slug: project.data.slug },
+props: { project },
+}));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+<meta charset="UTF-8">
+<Layout>
+    <div class="mx-auto p-10 items-center text-center">
+        <h1 class="font-bold text-4xl p-2 "> {project.data.title}</h1>
+        <h2 class="text-1xl p-2">{project.data.description}</h2>
+        <div class="flex justify-center p-4">
+
+            <Content />
+
+        </div>
+        <div>
+            <h2 class="text-1xl p-2">Published on {project.data.published}</h2>
+            <Button href={project.data.url} variant="outline">View on {project.data.platform}</Button>
+        </div>
+
+
+
+
+    </div>
+
+</Layout>

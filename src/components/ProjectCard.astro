@@ -20,6 +20,6 @@ const {project, desc} = Astro.props;
 		<img class="object-cover h-32 w-full wounded-md" src={project.data.image}></div>
 	</CardContent>
 	<CardFooter class="flex justify-between">
-		<Button variant="outline">View</Button>
+		<Button href={`/projects/${project.data.slug}`} variant="outline">View</Button>
 	</CardFooter>
 </Card>
