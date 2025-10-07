@@ -5,9 +5,9 @@ import { Button } from "@/components/starwind/button";
 const {project, desc} = Astro.props;
 ---
 
-<Card class="w-[400px]" slot="preview">
+<Card class="w-[300px]" slot="preview">
 	<CardHeader>
-		<CardTitle>{project.data.title}</CardTitle>
+		<CardTitle class="font-light text-s">{project.data.title}</CardTitle>
 		<CardDescription>
 			<small>{project.data.published}</small>
 			<div></div>

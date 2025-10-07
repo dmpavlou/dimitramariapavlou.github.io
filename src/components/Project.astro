@@ -5,23 +5,23 @@ import { Badge } from "@/components/starwind/badge";
 import ProjectCard from "@/components/ProjectCard.astro";
 ---
 
-<h1 class="p-6" style="font-size:2em;">Projects</h1>
-
 <u1>
-
-<div class="grid grid-cols-1 gap-20 md:grid-cols-4 p-5">
-    {
-    allProjects.map((article: any) => (
-    <ProjectCard project={article} buttonText="View">
-        <div class="flex">
-        {
-        article.data.tech.map((item: any)=>(
-        <Badge size="sm" variant="ghost">{item}</Badge>
-        ))
-        }
+    <div>
+        <h1 class="font-extrabold text-3xl py-5">Projects</h1>
+        <div class="grid grid-cols-1 gap-13 md:grid-cols-3">
+            {
+            allProjects.map((article: any) => (
+            <ProjectCard project={article} buttonText="View">
+                <div class="flex">
+                    {
+                    article.data.tech.map((item: any)=>(
+                    <Badge size="sm" variant="ghost">{item}</Badge>
+                    ))
+                    }
+                </div>
+            </ProjectCard>
+            ))
+            }
         </div>
-    </ProjectCard>
-    ))
-    }
     </div>
 </u1>

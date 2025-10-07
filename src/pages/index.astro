@@ -19,11 +19,43 @@ import Project from "@/components/Project.astro";
 <body>
 	<Layout>
 		<br>
-		<h1 class="font-extrabold text-5xl p-6">Dimitra Maria Pavlou</h1>
+		<h1 class="font-bold text-8xl p-3 heading text-center">Dimitra Maria Pavlou</h1>
 		<br>
 		<br>
-			<Project />
+		<div class="grid grid-cols-1 gap-13 md:grid-cols-2 px-90">
 
+			<div>
+				<h1 class="font-extrabold text-3xl py-5">About</h1>
+				<h2>Dimitra (she/her)
+
+					is a music technologist from Greece. With a passion for blending music,
+					sound and technology, she crafts immersive sonic experiences that resonate across various mediums,
+					through composing music, designing soundscapes or developing interactive sound applications.
+					She holds a Master’s degree in Sonic Arts from the University of Rome Tor Vergata, where she
+					specialized in sound design and audio production. Her academic journey began at the University of
+					Macedonia in Thessaloniki, where she earned a Bachelor’s degree in Musicology, as well as a violin
+					diploma. As a performer and improviser, Dimitra has been featured in numerous concerts and festivals
+					across Greece and Germany. Some of her appearances include the NORDLIED Festival at the
+					Elbphilharmonie Hamburg, the blurred edges Festival with Chromatic Noise Collection at Künstlerhaus
+					Faktor, performances at Resonanzraum St. Pauli with the impromptu.works ensemble and at the Museum
+					für Kunst und Gewerbe Hamburg. As a member of the 6daEXIt Improvisation Ensemble, she has
+					participated in performances at the Onassis Stegi in Athens and the Thessaloniki Concert Hall, among
+					others.
+					In addition to her work in sound design and performance, Dimitra has served as a Stage Manager for
+					various productions, including the European premiere of Cat Hope's opera "Speechless" during the
+					Ligeti Festival, while also gaining experience in live event production as an event technician.</h2>
+
+
+			</div>
+
+			<div class="py-5"> 
+			<img class="object-cover h-full w-full wounded-md" src='images/profilePhoto.jpg'>	
+			</div>
+		</div>
+
+		<div class="p-90">
+			<Project />
+		</div>
 	</Layout>
 </body>
 

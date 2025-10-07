@@ -4,7 +4,7 @@ slug: "co_lab"
 published: "20-07-2021"
 description: "sound design for a poem by Lamprini Karastamati."
 tech: ["sound design for theater performance"]
-image: "../images/genericPhoto.jpg"
+image: "https://f4.bcbits.com/img/a2726832814_16.jpg"
 url: "https://mitspol.bandcamp.com/track/c"
 platform: "Bandcamp"
 ---
