@@ -19,15 +19,17 @@ const { Content } = await render(project);
   <div 
     class="relative min-h-screen overflow-hidden"
   >
-    <!-- Blurred background -->
-    <div
-      class="absolute inset-0 bg-cover bg-center filter blur-3xl scale-110 opacity-60"
-      style={{ backgroundImage: `url(${project.data.image})` }}
-      aria-hidden="true"
-    ></div>
+   <!-- Background Wrapper -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+      <!-- Blurred Abstract Background -->
+      <div
+        class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-400 contrast-300 opacity-40"
+        style="background-image: url('/images/background.jpg');" aria-hidden="true"></div>
 
-    <!-- White overlay for better text readability -->
-    <div class="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
+      <!-- Very subtle translucent veil for text readability -->
+      <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
+    </div>
+
 
     <!-- Page Content -->
     <div class="relative z-10 mx-auto p-10 items-center">

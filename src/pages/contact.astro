@@ -21,7 +21,7 @@ import Project from "@/components/Project.astro";
     <div class="fixed inset-0 -z-10 overflow-hidden">
       <!-- Blurred Abstract Background -->
       <div
-      class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-400 contrast-300 opacity-40"
+        class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-400 contrast-300 opacity-40"
         style="background-image: url('/images/background.jpg');"
         aria-hidden="true"
       ></div>
@@ -30,8 +30,8 @@ import Project from "@/components/Project.astro";
       <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
     </div>
 
-    <!-- 🔹 Main Content -->
-    <main class="relative z-10 max-w-6xl mx-auto px-6 py-24 flex flex-col items-center text-center bg-transparent">
+    <!--  Main Content -->
+    <main class="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center bg-transparent">
 
       <!-- Force any parent white backgrounds to become transparent -->
       <style>
@@ -41,12 +41,12 @@ import Project from "@/components/Project.astro";
       </style>
 
       <!-- Title -->
-      <h1 class="font-bold text-6xl mb-12">Contact</h1>
+      <h1 class="font-bold text-6xl mb-12 heading">Contact</h1>
       <p class="text-lg text-gray-700 mb-16 max-w-2xl">
         Feel free to reach out through one of the platforms below.
       </p>
 
-      <!-- 🌐 Social Media Icons -->
+      <!-- Social Media Icons -->
       <div class="flex space-x-10">
         <!-- Instagram -->
         <a

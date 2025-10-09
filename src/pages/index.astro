@@ -22,10 +22,8 @@ import Project from "@/components/Project.astro";
     <div class="fixed inset-0 -z-10 overflow-hidden">
       <!-- Blurred Abstract Background -->
       <div
-      class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-400 contrast-300 opacity-40"
-        style="background-image: url('/images/background.jpg');"
-        aria-hidden="true"
-      ></div>
+        class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-400 contrast-300 opacity-40"
+        style="background-image: url('/images/background.jpg');" aria-hidden="true"></div>
 
       <!-- Very subtle translucent veil for text readability -->
       <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
@@ -33,9 +31,9 @@ import Project from "@/components/Project.astro";
 
     <!-- Main Content -->
     <main class="relative z-10 max-w-6xl mx-auto px-6 py-20">
-      
+
       <!-- Title -->
-      <h1 class="font-bold text-7xl p-3 heading text-center text-gray-900 drop-shadow-md">
+      <h1 class="font-bold text-6xl p-3 heading text-center text-gray-900 drop-shadow-md">
         Dimitra Maria Pavlou
       </h1>
 
@@ -43,7 +41,7 @@ import Project from "@/components/Project.astro";
 
       <!-- About Section -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        
+
         <!-- Text -->
         <div>
           <h2 class="font-extrabold text-3xl mb-4 text-gray-900">About</h2>
@@ -56,32 +54,54 @@ import Project from "@/components/Project.astro";
           <br>
           <p class="leading-relaxed text-lg text-gray-800">
             She holds a Master’s degree in Sonic Arts from the University of Rome Tor Vergata, where she
-            specialized in sound design and audio production. Before that, she earned a Bachelor’s degree in Musicology at the University
+            specialized in sound design and audio production. Before that, she earned a Bachelor’s degree in Musicology
+            at the University
             of Macedonia in Thessaloniki, as well as a violin diploma.
           </p>
           <br>
           <p class="leading-relaxed text-lg text-gray-800">
-            As a performer and improviser, Dimitra has been featured in numerous concerts and festivals across Greece and Germany. Some of her appearances include the NORDLIED Festival at the Elbphilharmonie Hamburg, the blurred edges Festival with Chromatic Noise Collection at Künstlerhaus Faktor, performances at Resonanzraum St. Pauli with the impromptu.works ensemble and at the Museum für Kunst und Gewerbe Hamburg. As a member of the 6daEXIt Improvisation Ensemble, she has participated in performances at the Onassis Stegi in Athens and the Thessaloniki Concert Hall, among others.
+            As a performer and improviser, Dimitra has been featured in numerous concerts and festivals across Greece
+            and Germany. Some of her appearances include the NORDLIED Festival at the Elbphilharmonie Hamburg, the
+            blurred edges Festival with Chromatic Noise Collection at Künstlerhaus Faktor, performances at Resonanzraum
+            St. Pauli with the impromptu.works ensemble and at the Museum für Kunst und Gewerbe Hamburg. As a member of
+            the 6daEXIt Improvisation Ensemble, she has participated in performances at the Onassis Stegi in Athens and
+            the Thessaloniki Concert Hall, among others.
           </p>
           <br>
           <p class="leading-relaxed text-lg text-gray-800">
-            In addition to her work in sound design and performance, Dimitra has served as a Stage Manager for various productions, including the European premiere of Cat Hope's opera "Speechless" as part of the Ligeti Festival in Hamburg, while also gaining experience in live event production as an event technician. Currently, she is working as a media technician.
+            In addition to her work in sound design and performance, Dimitra has served as a Stage Manager for various
+            productions, including the European premiere of Cat Hope's opera "Speechless" as part of the Ligeti Festival
+            in Hamburg, while also gaining experience in live event production as an event technician. Currently, she is
+            working as a media technician.
           </p>
         </div>
 
         <!-- Portrait -->
-        <div class="flex justify-center md:justify-end">
-          <img src="/images/profilePhoto.jpg"
-            alt="Portrait of Dimitra Maria Pavlou"
-            loading="lazy"
-            class="rounded-full object-cover w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 shadow-2xl border border-white/2 backdrop-blur-sm" />
-        </div>
-      </div>
+       <!-- Centered Container -->
+<div class="flex justify-center items-center py-10">
+  <!-- Portrait Wrapper -->
+  <div class="relative overflow-hidden rounded-[58%_42%_47%_53%/52%_68%_38%_58%] shadow-2xl border border-white/10 aspect-[3/4] w-56 sm:w-64 md:w-72 lg:w-80 hover:scale-[1.02] transition-transform duration-700 ease-out">
+    
+    <!-- Soft top highlight -->
+    <div class="absolute inset-0 bg-gradient-to-b from-white/15 to-transparent mix-blend-overlay"></div>
+
+    <!-- Portrait image -->
+    <img
+      src="/images/profilePhoto.jpg"
+      alt="Portrait of Dimitra Maria Pavlou"
+      loading="lazy"
+      class="object-cover w-full h-full"
+    />
+  </div>
+</div>
+
+
+
+
+
 
     </main>
   </Layout>
 </body>
 
 </html>
-
-

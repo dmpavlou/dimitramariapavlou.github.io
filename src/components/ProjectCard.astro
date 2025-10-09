@@ -4,35 +4,27 @@ import { Button } from "@/components/starwind/button";
 
 const {project, desc} = Astro.props;
 ---
-
-<Card class="w-full relative overflow-hidden rounded-none shadow-none" slot="preview">
-
-  <!-- Blurred Full-Card Background -->
-  <div
-    class="absolute inset-0 bg-cover bg-center filter blur-3xl scale-120"
-    style={{ backgroundImage: `url(${project.data.image})` }}
-    aria-hidden="true"
-  ></div>
-
-  <!-- Fade edges to white -->
-  <div class="absolute inset-0 bg-gradient-to-b from-white via-white/100 to-white/0"></div>
-
-  <!-- Content -->
-  <CardContent class="relative z-10 flex flex-col justify-between p-0">
+<Card
+  class="w-full relative overflow-hidden rounded-none shadow-none bg-transparent [box-shadow:0_0_8px_rgba(255,255,255,0.5)]"
+  slot="preview"
+>
+  <CardContent class="relative z-10 flex flex-col justify-between p-0 bg-transparent">
     
-    <!-- Foreground Image with rounded mask to fade edges -->
+    <!-- Foreground Image -->
     <div class="relative">
       <img
         src={project.data.image}
         alt={project.data.title}
-        class="w-full object-cover mask-image-[linear-gradient(to_bottom,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_10%,rgba(255,255,255,0)_90%,rgba(255,255,255,1)_100%)]"
+        class="w-full object-cover rounded-none"
         loading="lazy"
       />
     </div>
 
     <!-- Header -->
-    <div class="p-4">
-      <CardTitle class="font-light text-gray-900 drop-shadow-md">{project.data.title}</CardTitle>
+    <div class="p-4 bg-transparent">
+      <CardTitle class="font-light text-gray-900 drop-shadow-md">
+        {project.data.title}
+      </CardTitle>
       <CardDescription class="text-gray-800/90 drop-shadow-sm">
         <small>{project.data.published}</small>
         <div></div>
@@ -43,17 +35,20 @@ const {project, desc} = Astro.props;
       {project.data.tech && (
         <div class="flex flex-wrap gap-2 mt-2">
           {project.data.tech.map(tech => (
-            <span class="bg-gray-200/50 text-gray-900 text-xs px-2 py-1 rounded-md drop-shadow-sm">{tech}</span>
+            <span class="bg-transparent text-orange-500 text-xs px-2 py-1 rounded-md drop-shadow-sm">
+              {tech}
+            </span>
           ))}
         </div>
       )}
     </div>
 
     <!-- Footer -->
-    <CardFooter class="flex justify-between p-4">
-      <Button href={`/projects/${project.data.slug}`} variant="outline">View</Button>
+    <CardFooter class="flex justify-between p-4 bg-transparent">
+      <Button href={`/projects/${project.data.slug}`} variant="outline">
+        View
+      </Button>
     </CardFooter>
 
   </CardContent>
-
 </Card>
