@@ -7,22 +7,25 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-    <div>
-        <h1 class="font-extrabold text-3xl py-5">Projects</h1>
-        <div class="grid grid-cols-1 gap-30 md:grid-cols-3">
-            {
-            allProjects.map((article: any) => (
-            <ProjectCard project={article} buttonText="View">
-                <div class="flex">
-                    {
-                    article.data.tech.map((item: any)=>(
-                    <Badge size="sm" variant="ghost">{item}</Badge>
-                    ))
-                    }
-                </div>
-            </ProjectCard>
-            ))
-            }
-        </div>
+  <div class="py-8">
+    <h1 class="font-extrabold text-3xl py-5 text-center">Projects</h1>
+
+    <!-- Grid with no gaps -->
+    <div class="columns-1 sm:columns-2 md:columns-3 gap-0">
+      {allProjects.map((article: any) => (
+        <ProjectCard
+          project={article}
+          buttonText="View"
+          class="rounded-none shadow-none border-none"
+        >
+          <!-- Tech Tags Slot -->
+          <div class="flex flex-wrap gap-1 mt-2">
+            {article.data.tech.map((item: any) => (
+              <Badge size="sm" variant="ghost">{item}</Badge>
+            ))}
+          </div>
+        </ProjectCard>
+      ))}
     </div>
+  </div>
 </Layout>

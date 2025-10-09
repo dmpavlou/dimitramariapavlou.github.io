@@ -5,21 +5,59 @@ import { Button } from "@/components/starwind/button";
 const {project, desc} = Astro.props;
 ---
 
-<Card class="w-[300px]" slot="preview">
-	<CardHeader>
-		<CardTitle class="font-light text-s">{project.data.title}</CardTitle>
-		<CardDescription>
-			<small>{project.data.published}</small>
-			<div></div>
-			{project.data.description}</CardDescription>
-	</CardHeader>
-	<CardContent class="flex flex-col gap-4">
-		<div class="flex w-full flex-col gap-2">
-			<slot />
-		</div>
-		<img class="object-cover h-32 w-full rounded-md" src={project.data.image}></div>
-	</CardContent>
-	<CardFooter class="flex justify-between">
-		<Button href={`/projects/${project.data.slug}`} variant="outline">View</Button>
-	</CardFooter>
+<Card class="max-w-sm w-full relative overflow-hidden rounded-none shadow-none" slot="preview">
+  
+  <!-- Blurred Abstract Background -->
+  <div
+    class="absolute inset-0 bg-cover bg-center filter blur-3xl scale-110"
+    style={{ backgroundImage: `url(${project.data.image})` }}
+    aria-hidden="true"
+  ></div>
+
+  <!-- Optional light overlay for readability -->
+  <div class="absolute inset-0 bg-white/20"></div>
+
+  <!-- Content -->
+  <CardContent class="relative z-10 flex flex-col justify-between h-full p-4">
+    
+    <!-- Header -->
+    <CardHeader>
+      <CardTitle class="font-light text-gray-900 drop-shadow-md">{project.data.title}</CardTitle>
+      <CardDescription class="text-gray-800/90 drop-shadow-sm">
+        <small>{project.data.published}</small>
+        <div></div>
+        {project.data.description}
+      </CardDescription>
+    </CardHeader>
+
+    <!-- Tech Tags -->
+    {project.data.tech && (
+      <div class="flex flex-wrap gap-2 mt-2">
+        {project.data.tech.map(tech => (
+          <span class="bg-gray-200/70 text-gray-900 text-xs px-2 py-1 rounded-md drop-shadow-sm">
+            {tech}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <!-- Foreground Image -->
+    <div class="mt-4">
+      <img
+        src={project.data.image}
+        alt={project.data.title}
+        class="w-full object-cover shadow-lg border border-white/10 rounded-none"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Footer -->
+    <CardFooter class="flex justify-between mt-auto">
+      <Button href={`/projects/${project.data.slug}`} variant="outline">View</Button>
+    </CardFooter>
+
+  </CardContent>
+
 </Card>
+
+
