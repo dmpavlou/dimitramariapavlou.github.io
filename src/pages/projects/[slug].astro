@@ -16,22 +16,48 @@ const { Content } = await render(project);
 ---
 <meta charset="UTF-8">
 <Layout>
-    <div class="mx-auto p-10 items-center">
-        <h1 class="font-bold text-4xl p-2 text-center"> {project.data.title}</h1>
-        <h2 class="text-1xl p-2 text-center">{project.data.description}</h2>
-        <div class="flex justify-center p-8">
+  <div 
+    class="relative min-h-screen overflow-hidden"
+  >
+    <!-- Blurred background -->
+    <div
+      class="absolute inset-0 bg-cover bg-center filter blur-3xl scale-110 opacity-60"
+      style={{ backgroundImage: `url(${project.data.image})` }}
+      aria-hidden="true"
+    ></div>
 
-            <Content />
+    <!-- White overlay for better text readability -->
+    <div class="absolute inset-0 bg-white/40 backdrop-blur-sm"></div>
 
-        </div>
-        <div class="text-center items-center">
-            <h2 class="text-1xl p-2">Published on {project.data.published}</h2>
-            <Button href={project.data.url} variant="outline">View on {project.data.platform}</Button>
-        </div>
+    <!-- Page Content -->
+    <div class="relative z-10 mx-auto p-10 items-center">
+      
+      <!-- Go Back -->
+      <div class="mt-16 mb-6 text-center">
+        <a 
+          href="/portfolio" 
+          class="inline-block text-gray-600 hover:text-orange-500 transition-colors text-base"
+        >
+          ← Back to Projects
+        </a>
+      </div>
 
+      <h1 class="font-bold text-4xl p-2 text-center">{project.data.title}</h1>
+      <h2 class="text-lg p-2 text-center text-gray-700">{project.data.description}</h2>
 
+      <div class="flex justify-center p-8">
+        <Content />
+      </div>
 
+      <div class="text-center items-center">
+        <h2 class="text-sm p-2 text-gray-600">
+          Published on {project.data.published}
+        </h2>
+        <Button href={project.data.url} variant="outline">
+          View on {project.data.platform}
+        </Button>
+      </div>
 
     </div>
-
+  </div>
 </Layout>
