@@ -3,12 +3,13 @@ import { getCollection } from "astro:content";
 const allProjects = await getCollection("projects");
 import { Badge } from "@/components/starwind/badge";
 import ProjectCard from "@/components/ProjectCard.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<u1>
+<Layout>
     <div>
         <h1 class="font-extrabold text-3xl py-5">Projects</h1>
-        <div class="grid grid-cols-1 gap-13 md:grid-cols-3">
+        <div class="grid grid-cols-1 gap-30 md:grid-cols-3">
             {
             allProjects.map((article: any) => (
             <ProjectCard project={article} buttonText="View">
@@ -24,4 +25,4 @@ import ProjectCard from "@/components/ProjectCard.astro";
             }
         </div>
     </div>
-</u1>
+</Layout>

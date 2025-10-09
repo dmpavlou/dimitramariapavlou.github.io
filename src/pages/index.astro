@@ -5,75 +5,69 @@ import { Button } from "@/components/starwind/button";
 import ProjectCard from "@/components/ProjectCard.astro";
 import Project from "@/components/Project.astro";
 ---
-
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="generator" content={Astro.generator} />
-	<title>Dimitra Maria Pavlou</title>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dimitra Maria Pavlou</title>
 </head>
 
-<body>
-	<Layout>
+<body class="bg-white text-gray-800 antialiased">
+  <Layout>
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-6 py-10">
+      
+      <!-- Title -->
+      <h1 class="font-bold text-7xl p-3 heading text-center">
+        Dimitra Maria Pavlou
+      </h1>
+<br>
+<br>
+<br>
+      <!-- About Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <!-- Text -->
+        <div>
+          <h2 class="font-extrabold text-3xl mb-4">About</h2>
+          <p class="leading-relaxed text-lg text-gray-700">
+            Dimitra (she/her) is a music technologist from Greece. With a passion for blending music,
+            sound and technology, she crafts immersive sonic experiences that resonate across various mediums —
+            through composing music, designing soundscapes or developing interactive sound applications.
+          </p>
+          <br>
+          <p class="leading-relaxed text-lg text-gray-700">
+            She holds a Master’s degree in Sonic Arts from the University of Rome Tor Vergata, where she
+            specialized in sound design and audio production. Her academic journey began at the University
+            of Macedonia in Thessaloniki, where she earned a Bachelor’s degree in Musicology, as well as a violin diploma.
+          </p>
+          <br>
+          <p class="leading-relaxed text-lg text-gray-700">
+            As a performer and improviser, Dimitra has been featured in numerous concerts and festivals across Greece and Germany — including the NORDLIED Festival at the Elbphilharmonie Hamburg, the blurred edges Festival with Chromatic Noise Collection, and performances at Resonanzraum St. Pauli.
+          </p>
+          <br>
+          <p class="leading-relaxed text-lg text-gray-700">
+            She has also worked as a Stage Manager for various productions, including the European premiere of Cat Hope's opera <em>"Speechless"</em> during the Ligeti Festival, while also gaining experience in live event production as an event technician.
+          </p>
+        </div>
 
-		<h1 class="font-bold text-7xl p-3 heading text-center">Dimitra Maria Pavlou</h1>
-		<br>
-		<br>
-		<div class="grid grid-cols-1 gap-13 md:grid-cols-2 px-90">
+        <!-- Image -->
+        <div class="flex justify-center md:justify-end">
+          <img src="/images/profilePhoto.jpg"
+            alt="Portrait of Dimitra Maria Pavlou"
+            loading="lazy"
+            class="rounded-full object-cover w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 shadow-xl" />
+        </div>
+      </div>
 
-			<div>
-				<h1 class="font-extrabold text-3xl py-5">About</h1>
-				<h2>Dimitra (she/her)
+      <!-- Project Section -->
+      <section class="mt-16">
+        <Project />
+      </section>
 
-					is a music technologist from Greece. With a passion for blending music,
-					sound and technology, she crafts immersive sonic experiences that resonate across various
-					mediums,
-					through composing music, designing soundscapes or developing interactive sound applications.
-					She holds a Master’s degree in Sonic Arts from the University of Rome Tor Vergata, where she
-					specialized in sound design and audio production. Her academic journey began at the
-					University
-					of
-					Macedonia in Thessaloniki, where she earned a Bachelor’s degree in Musicology, as well as a
-					violin
-					diploma. As a performer and improviser, Dimitra has been featured in numerous concerts and
-					festivals
-					across Greece and Germany. Some of her appearances include the NORDLIED Festival at the
-					Elbphilharmonie Hamburg, the blurred edges Festival with Chromatic Noise Collection at
-					Künstlerhaus
-					Faktor, performances at Resonanzraum St. Pauli with the impromptu.works ensemble and at the
-					Museum
-					für Kunst und Gewerbe Hamburg. As a member of the 6daEXIt Improvisation Ensemble, she has
-					participated in performances at the Onassis Stegi in Athens and the Thessaloniki Concert
-					Hall,
-					among
-					others.
-					In addition to her work in sound design and performance, Dimitra has served as a Stage
-					Manager
-					for
-					various productions, including the European premiere of Cat Hope's opera "Speechless" during
-					the
-					Ligeti Festival, while also gaining experience in live event production as an event
-					technician.
-				</h2>
-
-
-			</div>
-
-			<div class="flex justify-center items-center py-5">
-				<img src="/images/profilePhoto.jpg" alt="Portrait" loading="lazy"
-					class="rounded-full object-cover w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 shadow-lg" />
-			</div>
-
-
-			<div class="p-90">
-				<Project />
-			</div>
-		</div>
-		</div>
-	</Layout>
+    </main>
+  </Layout>
 </body>
 
 </html>

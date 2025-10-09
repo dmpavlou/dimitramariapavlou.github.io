@@ -1,9 +1,27 @@
- <header class="bg-sky-100 p-1">
-            <nav>
-                <ul class="flex flex-row">
-                    <li class="p-4"><a href="/" class="hover:font-bold">Home</a></li>
-                    <li class="p-4"><a href="/" class="hover:font-bold">About</a></li>
-                    <li class="p-4"><a href="/" class="hover:font-bold">Portfolio</a></li>
-                </ul>
-            </nav>
-        </header>
+<header class="fixed top-0 left-0 w-full z-50">
+    <nav class="flex justify-end items-center px-8 py-4">
+        <ul class="flex flex-row items-center space-x-4">
+            <!-- About -->
+            <li>
+                <a href="/"
+                    class="inline-block text-lg text-gray-800 transition-colors duration-200 ease-out hover:text-orange-500">
+                    About
+                </a>
+            </li>
+            <!-- Portfolio -->
+            <li>
+                <a href="/"
+                    class="inline-block text-lg text-gray-800 transition-colors duration-200 ease-out hover:text-orange-500">
+                    Portfolio
+                </a>
+            </li>
+
+            <!-- Icon -->
+            <li class="p-4">
+                <a href="/" class="flex items-center space-x-2 transition-transform duration-300 hover:scale-210">
+                    <img src="/favicon.svg" alt="Home" class="w-6 h-6" />
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
