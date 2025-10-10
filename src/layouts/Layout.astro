@@ -5,40 +5,43 @@ import Navbar from "@/components/Navbar.astro";
 const title = "My Portfolio";
 ---
 
-
-<html lang="eng">
-
-<head>
-    <style is:global>
-        @import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
-        .heading{   
-        font-family: "Rock 3D"
-        }
-    </style>
-    <meta chaset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewpoint" content="width=device-width" />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-</head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-<body>
+    <!-- 🎨 Font -->
+    <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Rock+3D&display=swap");
+      .heading {
+        font-family: "Rock 3D", cursive;
+      }
+    </style>
+  </head>
 
-    <!-- Background Wrapper -->
+  <body class="relative min-h-screen text-gray-800 antialiased overflow-x-hidden bg-transparent">
+    <!-- 🌈 Global Background Wrapper -->
     <div class="fixed inset-0 -z-10 overflow-hidden">
-      <!-- Blurred Abstract Background -->
+      <!-- Blurred, vivid abstract background -->
       <div
-        class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-400 contrast-300 opacity-40"
+        class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-[4] contrast-[3] opacity-40"
         style="background-image: url('/images/background.webp');"
         aria-hidden="true"
       ></div>
 
-      <!-- Very subtle translucent veil for text readability -->
+      <!-- Soft translucent veil for readability -->
       <div class="absolute inset-0 bg-white/20 backdrop-blur-[2px]"></div>
     </div>
 
-   <Navbar />  
-    <slot />
-</body>
+    <!-- 🧭 Navbar -->
+    <Navbar />
 
+    <!-- 🧩 Page Content -->
+    <main class="relative z-10 bg-transparent">
+      <slot />
+    </main>
+  </body>
 </html>
