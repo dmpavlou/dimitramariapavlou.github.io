@@ -17,28 +17,10 @@ import Project from "@/components/Project.astro";
 
 <body class="text-gray-800 antialiased bg-transparent">
   <Layout>
-    <!-- Background Wrapper -->
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-      <!-- Blurred Abstract Background -->
-      <div
-        class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-400 contrast-300 opacity-40"
-        style="background-image: url('/images/background.jpg');"
-        aria-hidden="true"
-      ></div>
-
-      <!-- Very subtle translucent veil for text readability -->
-      <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
-    </div>
+  
 
     <!--  Main Content -->
     <main class="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center bg-transparent">
-
-      <!-- Force any parent white backgrounds to become transparent -->
-      <style>
-        main, body, .layout-wrapper, .page-container {
-          background: transparent !important;
-        }
-      </style>
 
       <!-- Title -->
       <h1 class="font-bold text-6xl mb-12 heading">Contact</h1>

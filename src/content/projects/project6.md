@@ -4,7 +4,7 @@ slug: "with_a_magic_wand"
 published: "29-03-2022"
 description: "Radio spot participation for the European School Radio Contest 2022"
 tech: ["radio spot"]
-image: "https://i1.sndcdn.com/artworks-YNcxEe7rJpn1crt5-ORefog-t1080x1080.jpg"
+image: "/images/project6.webp"
 url: "https://soundcloud.com/mitspol/with-a-magic-wand?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 platform: "Soundcloud"
 ---

@@ -4,7 +4,7 @@ slug: "motor_dance"
 published: "05-09-2023"
 description: "a sound art piece on the theme of machinery."
 tech: ["sound art collage"]
-image: "https://f4.bcbits.com/img/a1838068903_16.jpg"
+image: "/images/project3.webp"
 url: "https://mitspol.bandcamp.com/track/motor-dance"
 platform: "Bandcamp"
 ---

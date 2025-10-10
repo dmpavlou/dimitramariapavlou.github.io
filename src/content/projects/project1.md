@@ -4,7 +4,7 @@ slug: "parents_of_the_countryside"
 published: "19-12-2020"
 description: "multiple layered field recordings of a Greek village, airy distant synth sounds, melodic improvisation on an electronic instrument."
 tech: ["field recordings and improvisation"]
-image: "https://f4.bcbits.com/img/a3562674569_16.jpg"
+image: "/images/project1.webp"
 url: "https://mitspol.bandcamp.com/track/parents-of-the-countryside"
 platform: "Bandcamp"
 ---

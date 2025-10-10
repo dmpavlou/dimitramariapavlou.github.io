@@ -4,7 +4,7 @@ slug: "yesterdays_soil"
 published: "13-03-2022"
 description: "a track featuring voice looping and live electronics"
 tech: ["short film track"]
-image: "https://f4.bcbits.com/img/a0511195222_16.jpg"
+image: "/images/project5.webp"
 url: "https://www.youtube.com/watch?v=mEMv5-3PQ9s"
 platform: "YouTube"
 ---

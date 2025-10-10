@@ -4,7 +4,7 @@ slug: "fíles"
 published: "02-09-2021"
 description: "a space themed track."
 tech: ["pop track"]
-image: "https://f4.bcbits.com/img/a3555306367_16.jpg"
+image: "/images/project4.webp"
 url: "https://mitspol.bandcamp.com/track/--8"
 platform: "Bandcamp"
 ---

@@ -4,7 +4,7 @@ slug: "ambient_soundscape_generator"
 published: "28-11-2023"
 description: "a desktop application that generates real-time ambient soundscapes."
 tech: ["desktop application"]
-image: "https://media.licdn.com/dms/image/v2/D4E2DAQE0fE7H25Wuug/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1702037528724?e=1760014800&v=beta&t=4f8FHUgSEmh3BIVROUxL1RNCG8VFwUnmWc4XGNrHua8"
+image: "/images/project7.webp"
 url: "https://github.com/dmpavlou/Ambient-Soundscape-Generator"
 platform: "GitHub"
 ---

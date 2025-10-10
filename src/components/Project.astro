@@ -1,25 +1,13 @@
 ---
+import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 const allProjects = await getCollection("projects");
 import { Badge } from "@/components/starwind/badge";
 import ProjectCard from "@/components/ProjectCard.astro";
-import Layout from "@/layouts/Layout.astro";
 ---
 
  <Layout>
-  <!-- Background Wrapper -->
-  <div class="fixed inset-0 -z-10 overflow-hidden">
-    <!-- Blurred Abstract Background -->
-    <div
-      class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-400 contrast-300 opacity-40"
-      style="background-image: url('/images/background.jpg');"
-      aria-hidden="true"
-    ></div>
-
-    <!-- Very subtle translucent veil for text readability -->
-    <div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
-  </div>
-
+  
   <!-- Main Content -->
   <div class="relative z-10 py-8 bg-transparent">
     <!-- Force override any white background that Layout adds -->
