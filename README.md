@@ -1,4 +1,4 @@
-# Dimitra Maria Pavlou – Personal Website
+# Personal Website
 
 Welcome to my personal website!  
 This site includes my portfolio, bio and contact information.
