@@ -1,6 +1,7 @@
 ---
 title: "motor dance" 
 slug: "motor_dance"
+id: 8
 published: "05-09-2023"
 description: "a sound art piece on the theme of machinery."
 tech: ["sound art collage"]

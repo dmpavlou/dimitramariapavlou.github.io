@@ -1,47 +1,60 @@
 ---
 import "@/styles/starwind.css";
 import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
+
 
 const title = "My Portfolio";
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- 🎨 Font -->
-    <style is:global>
-      @import url("https://fonts.googleapis.com/css2?family=Rock+3D&display=swap");
-      .heading {
-        font-family: "Rock 3D", cursive;
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <body class="relative min-h-screen text-gray-800 antialiased overflow-x-hidden bg-transparent">
-    <!-- 🌈 Global Background Wrapper -->
-    <div class="fixed inset-0 -z-10 overflow-hidden">
-      <!-- Blurred, vivid abstract background -->
-      <div
-        class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-[4] contrast-[3] opacity-40"
-        style="background-image: url('/images/background.webp');"
-        aria-hidden="true"
-      ></div>
+  <!-- 🎨 Font -->
+  <style is:global>
+    @import url("https://fonts.googleapis.com/css2?family=Rock+3D&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
 
-      <!-- Soft translucent veil for readability -->
-      <div class="absolute inset-0 bg-white/20 backdrop-blur-[2px]"></div>
-    </div>
+    .heading {
+      font-family: "Rock 3D", cursive;
+    }
 
-    <!-- 🧭 Navbar -->
-    <Navbar />
+    body {
+      font-family: "Zen Maru Gothic";
+    }
+  </style>
+</head>
 
-    <!-- 🧩 Page Content -->
-    <main class="relative z-10 bg-transparent">
-      <slot />
-    </main>
-  </body>
+<body class="relative min-h-screen text-gray-800 antialiased overflow-x-hidden bg-transparent">
+  <!-- 🌈 Global Background Wrapper -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <!-- Blurred, vivid abstract background -->
+    <div class="absolute inset-0 bg-cover bg-center filter blur-[70px] scale-75 brightness-[4] contrast-[3] opacity-40"
+      style="background-image: url('/images/background.webp');" aria-hidden="true"></div>
+
+    <!-- Soft translucent veil for readability -->
+    <div class="absolute inset-0 bg-white/20 backdrop-blur-[2px]"></div>
+  </div>
+
+  <!-- 🧭 Navbar -->
+  <Navbar />
+
+  <!-- 🧩 Page Content -->
+  <main class="relative z-10 bg-transparent">
+    <slot />
+  </main>
+</body>
+
+</html>
+
+<!-- 🪶 Footer -->
+<Footer />
+</body>
+
 </html>

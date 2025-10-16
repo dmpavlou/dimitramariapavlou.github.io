@@ -1,6 +1,7 @@
 ---
 title: "With a magic wand..." 
 slug: "with_a_magic_wand"
+id: 6
 published: "29-03-2022"
 description: "Radio spot participation for the European School Radio Contest 2022"
 tech: ["radio spot"]

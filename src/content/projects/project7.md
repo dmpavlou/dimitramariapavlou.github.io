@@ -1,6 +1,7 @@
 ---
 title: "Ambient Soundscape Generator - version 1.0" 
 slug: "ambient_soundscape_generator"
+id: 2
 published: "28-11-2023"
 description: "a desktop application that generates real-time ambient soundscapes."
 tech: ["desktop application"]

@@ -1,6 +1,7 @@
 ---
 title: "goodnight‽" 
 slug: "goodnight"
+id: 1
 published: "22-09-2025"
 description: "an electronic piece, made using various eurorack modules and manipulated urban/riverside field recordings at the sound art studio of HMTM München."
 tech: ["analog synthesizer piece"]
