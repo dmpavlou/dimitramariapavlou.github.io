@@ -6,7 +6,6 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
 	
 	site: 'https://dimitramariapavlou.github.io',
-	base: '/my-repo',
 
 	vite: {
 		plugins: [tailwindcss()],
