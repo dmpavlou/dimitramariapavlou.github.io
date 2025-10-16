@@ -5,9 +5,12 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	
+	site: 'https://dimitramariapavlou.github.io',
+	base: '/my-repo',
+
 	vite: {
 		plugins: [tailwindcss()],
 	},
 
-	site: 'https://dimitramariapavlou.github.io',
+	
 });
