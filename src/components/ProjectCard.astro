@@ -5,7 +5,7 @@ import { Button } from "@/components/starwind/button";
 const {project, desc} = Astro.props;
 ---
 <Card
-  class="w-full relative overflow-hidden rounded-none shadow-none bg-transparent [box-shadow:0_0_8px_rgba(255,255,255,0.5)]"
+  class="w-full relative overflow-hidden rounded-none shadow-none bg-transparent border-white/30"
   slot="preview"
 >
   <CardContent class="relative z-10 flex flex-col justify-between p-0 bg-transparent">
@@ -35,7 +35,7 @@ const {project, desc} = Astro.props;
       {project.data.tech && (
         <div class="flex flex-wrap gap-2 mt-2">
           {project.data.tech.map(tech => (
-            <span class="bg-transparent text-orange-500 text-xs px-2 py-1 rounded-md drop-shadow-sm">
+            <span class="bg-transparent text-orange-500 text-xs rounded-md drop-shadow-sm">
               {tech}
             </span>
           ))}
